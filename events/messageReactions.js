@@ -12,12 +12,10 @@ module.exports.add = async (reaction, user) => {
 			await member.roles.add(role);
 			if (roleName === 'Challenger') {
 				const owner = await guild.fetchOwner();
-				// const channelId = "138384273450664007";
-				const channelId = "1273382168047124480";
-				
+				const channelId = "138384273450664007";
 				const channel = guild.channels.cache.get(channelId);
 				if (channel) {
-					await channel.send(`@${owner.user.tag}, ${user.tag} has started the Super Wizard Challenge! Good luck`);
+					await channel.send(`{owner.user}, ${user.globalName || user.tag} has started the Super Wizard Challenge!\nGood luck, ${user.globalName || user.tag}!`);
 				}
 			}
 			console.log(`Added role ${roleName} to ${user.tag}`);
