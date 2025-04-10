@@ -12,7 +12,7 @@ module.exports.add = async (reaction, user) => {
 			await member.roles.add(role);
 			if (roleName === 'Challenger') {
 				const owner = await guild.fetchOwner();
-				const channelId = "138384273450664007";
+				const channelId = "1348384273450664007";
 				const channel = guild.channels.cache.get(channelId);
 				console.log('added Challenger')
 				if (channel) {
