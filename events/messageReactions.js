@@ -14,6 +14,7 @@ module.exports.add = async (reaction, user) => {
 				const owner = await guild.fetchOwner();
 				const channelId = "138384273450664007";
 				const channel = guild.channels.cache.get(channelId);
+				console.log('added Challenger')
 				if (channel) {
 					await channel.send(`{owner.user}, ${user.globalName || user.tag} has started the Super Wizard Challenge!\nGood luck, ${user.globalName || user.tag}!`);
 				}
